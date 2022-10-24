@@ -1,4 +1,6 @@
 /*
+    Minimum Distance Pairs :-
+
     LINK:   https://www.codingninjas.com/codestudio/contests/codestudio-weekend-contest-9/problems/16812
 */
 
@@ -7,7 +9,8 @@
 #include <algorithm>
 using namespace std;
 
-int minimumDistancePairs(int n, vector<int> &arr) {
+int minimumDistancePairs(int n, vector<int> &arr)
+{
 
     sort(arr.begin(), arr.end());
 
@@ -47,7 +50,6 @@ int main()
         {
             cin >> v[i];
         }
-
 
         cout << minimumDistancePairs(n, v) << "\n";
     }

@@ -1,3 +1,13 @@
+/*
+    Search In Rotated Sorted Array :-
+
+    LINK:
+*/
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
 int getPivot(vector<int> &arr, int n)
 {
     int left = 0, right = n - 1;

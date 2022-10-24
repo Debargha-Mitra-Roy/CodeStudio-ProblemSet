@@ -1,5 +1,15 @@
-long long transactions(vector<int> &money) {
+/*
+    Transactions :-
 
+    LINK:
+*/
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+long long transactions(vector<int> &money)
+{
     long long int maxx = 0;
 
     if (money[0] > 0)
@@ -10,7 +20,6 @@ long long transactions(vector<int> &money) {
     for (int  i = 0; i < money.size(); i++)
     {
         sum = sum + money[i];
-
         maxx = max(maxx, sum);
     }
 

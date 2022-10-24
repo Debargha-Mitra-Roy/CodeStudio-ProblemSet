@@ -1,4 +1,14 @@
-int canBePalindrome(int n, string s) {
+/*
+    Pseudo Palindrome :-
+
+    LINK:
+*/
+
+#include <iostream>
+using namespace std;
+
+int canBePalindrome(int n, string s)
+{
 
     int count = 0;
     for (int i = 0; i < n; i++)

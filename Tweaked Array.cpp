@@ -1,3 +1,13 @@
+/*
+    Tweaked Array :-
+
+    LINK:
+*/
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
 vector<int> tweakTheArray(vector<int> arr, int n)
 {
     // Store the sum of all the elements in 'totalSum'.

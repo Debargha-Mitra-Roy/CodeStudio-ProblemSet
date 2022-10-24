@@ -1,9 +1,11 @@
 /*
+    Print Like A Wave :-
+
     LINK:   https://www.codingninjas.com/codestudio/problems/print-like-a-wave_893268
 */
 
 #include <iostream>
-#include<vector>
+#include <vector>
 using namespace std;
 
 vector<int> wavePrint(vector<vector<int>> arr, int nRows, int mCols)
@@ -51,19 +53,19 @@ int main()
         {
             for (int j = 0; j < mCols; j++)
             {
+                int value;
                 cin >> value;
                 arr[i].push_back(value);
             }
         }
 
-        vector<int>answer = wavePrint(arr, nRows, mCols);
-        cout << answer << "\n";
+        vector<int> answer = wavePrint(arr, nRows, mCols);
+
+        for (auto it : answer)
+        {
+            cout << it << "\n";
+        }
     }
 
     return 0;
 }
-
-/*
-    Time Complexity = O(N * M)
-    Space Complexity = O(M * N)
-*/

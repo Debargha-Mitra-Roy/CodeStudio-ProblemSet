@@ -1,3 +1,14 @@
+/*
+    Triplets with Given Sum :-
+
+    LINK:
+*/
+
+#include <iostream>
+#include <vector>
+#include <algorithm>
+using namespace std;
+
 vector<vector<int>> findTriplets(vector<int> arr, int n, int K)
 {
     vector<vector<int>> ans;

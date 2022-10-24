@@ -1,7 +1,7 @@
 /*
-    Find K’th Character of Decrypted String :-
+    Construct Binary Tree From In-order and Level-order :-
 
-    LINK:   https://www.codingninjas.com/codestudio/problems/find-k-th-character-of-decrypted-string_630508
+    LINK:   https://www.codingninjas.com/codestudio/problems/construct-binary-tree-from-in-order-and-level-order_2824774
 */
 
 #include <iostream>

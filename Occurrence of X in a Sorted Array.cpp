@@ -1,3 +1,12 @@
+/*
+    Occurrence of X in a Sorted Array :-
+
+    LINK:   https://www.codingninjas.com/codestudio/problems/occurrence-of-x-in-a-sorted-array_630456
+*/
+
+#include <iostream>
+using namespace std;
+
 int firstOccurrence(int arr[], int n, int x)
 {
     // Initialize start and end pointers
@@ -76,7 +85,7 @@ int countOccurences(int arr[], int n, int x)
     xEndIndex = lastOccurrence(arr, n, x);
 
     // Total occurrences will be
-    int count =  xEndIndex - xStartIndex + 1;
+    int count = xEndIndex - xStartIndex + 1;
 
     return count;
 }

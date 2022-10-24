@@ -1,3 +1,12 @@
+/*
+    Sort 0 1 2 :-
+
+    LINK:
+*/
+
+#include <iostream>
+using namespace std;
+
 void sort012(int *arr, int n)
 {
     int i = 0;

@@ -1,4 +1,6 @@
 /*
+    Maximum Bosses :-
+
     LINK:   https://www.codingninjas.com/codestudio/contests/codestudio-weekend-contest-9/problems/17040
 */
 
@@ -8,18 +10,17 @@ using namespace std;
 
 int maximumBosses(int n, int p, vector<int> power)
 {
-
     int count = 0;
 
     for (int i = 0; i < n; i++)
     {
-        if (p > arr[i] && p != 0)
+        if (p > power[i] && p != 0)
             count++;
 
         else
             break;
 
-        p = p - arr[i];
+        p = p - power[i];
     }
 
     return count;

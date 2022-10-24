@@ -1,3 +1,13 @@
+/*
+    Minimize Bill :-
+
+    LINK:   
+*/
+
+#include<iostream>
+#include<vector>
+using namespace std;
+
 long long int totalBill(int n, vector<int> &a)
 {
     int maxx = a[0];

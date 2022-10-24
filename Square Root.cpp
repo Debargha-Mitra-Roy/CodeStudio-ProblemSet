@@ -1,11 +1,18 @@
-int sqrtN(long long int N) {
+/*
+    Square Root :-
 
+    LINK:
+*/
+
+#include <iostream>
+using namespace std;
+
+int sqrtN(long long int N)
+{
 
     // Handle corner case
     if (N == 0 || N == 1)
-    {
         return N;
-    }
 
     // Initialize variable 'low' and 'high' with lower and upper bound of answer
     long long int low = 2;

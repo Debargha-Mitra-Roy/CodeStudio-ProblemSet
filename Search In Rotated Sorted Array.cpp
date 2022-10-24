@@ -1,4 +1,14 @@
-int getPivot(int* arr, int n)
+/*
+    Search In Rotated Sorted Array :-
+
+    LINK:
+*/
+
+#include <iostream>
+#include <vector>
+using namespace std;
+
+int getPivot(int *arr, int n)
 {
     int left = 0, right = n - 1;
 
@@ -16,7 +26,7 @@ int getPivot(int* arr, int n)
     return left;
 }
 
-int binarySearch(int* arr, int left, int right, int k)
+int binarySearch(int *arr, int left, int right, int k)
 {
     int start = left, end = right;
 
@@ -43,7 +53,8 @@ int binarySearch(int* arr, int left, int right, int k)
     return -1;
 }
 
-int search(int* arr, int n, int key) {
+int search(int *arr, int n, int key)
+{
     int pivot = getPivot(arr, n);
 
     /* Binary Search on first line */
