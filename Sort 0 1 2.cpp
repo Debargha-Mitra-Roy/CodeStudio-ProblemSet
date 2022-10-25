@@ -1,11 +1,18 @@
 /*
     Sort 0 1 2 :-
 
-    LINK:
+    LINK:   https://www.codingninjas.com/codestudio/problems/sort-0-1-2_631055
 */
 
 #include <iostream>
 using namespace std;
+
+void swap(int *a, int *b)
+{
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+}
 
 void sort012(int *arr, int n)
 {
@@ -17,7 +24,7 @@ void sort012(int *arr, int n)
     {
         if (arr[i] == 0)
         {
-            swap(arr[i], arr[nextZero]);
+            swap(&arr[i], &arr[nextZero]);
             i++;
             nextZero++;
         }
