@@ -6,47 +6,55 @@
 
 #include <iostream>
 #include <vector>
+#include <queue>
 using namespace std;
+
+int findMinAnswer(vector<int> diff, int k)
+{
+    int n = diff.size();
+
+    // We make a deque of indices such that the values in the deque are non increasing at any point.
+    deque<int> dq;
+
+    for (int i = 0; i < k; ++i)
+    {
+        while (!dq.empty() && diff[dq.back()] <= diff[i])
+        {
+            dq.pop_back();
+        }
+
+        dq.push_back(i);
+    }
+
+    int minAnswer = diff[dq.front()];
+
+    for (int i = k; i < n; ++i)
+    {
+        if (!dq.empty() && dq.front() == i - k)
+            dq.pop_front();
+
+        while (!dq.empty() && diff[dq.back()] <= diff[i])
+        {
+            dq.pop_back();
+        }
+
+        dq.push_back(i);
+
+        minAnswer = min(minAnswer, diff[dq.front()]);
+    }
+
+    return minAnswer;
+}
 
 int maxAdjDifference(vector<int> &arr, int k)
 {
-    int start = 0;
-    int end = arr.size() - 1;
+    int n = arr.size();
+    vector<int> diff(n - 1);
 
-    if (k > (end - start))
-        return 0;
-
-    while (k != 0)
+    for (int i = 0; i < n - 1; ++i)
     {
-        if (k % 2 == 0)
-        {
-            start = start + 1;
-            end = end - 1;
-            k = k - 2;
-        }
-
-        else
-        {
-            int a = arr[start + 1] - arr[start];
-            int b = arr[end] - arr[end];
-
-            if (a > b)
-                start = start + 1;
-
-            else if (b >= a)
-                end = end - 1;
-
-            k = k - 1;
-        }
+        diff[i] = arr[i + 1] - arr[i];
     }
 
-    int max_difference = 0;
-
-    for (int i = start + 1; i <= end; i++)
-    {
-        int curr_difference = arr[i] - arr[i - 1];
-        max_difference = max(max_difference, curr_difference);
-    }
-
-    return max_difference;
+    return findMinAnswer(diff, n - k - 1);
 }
