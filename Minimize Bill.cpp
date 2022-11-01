@@ -1,11 +1,11 @@
 /*
     Minimize Bill :-
 
-    LINK:   
+    LINK:
 */
 
-#include<iostream>
-#include<vector>
+#include <iostream>
+#include <vector>
 using namespace std;
 
 long long int totalBill(int n, vector<int> &a)
